@@ -1,10 +1,13 @@
 language: node_js
 node_js:
   - "lts/*"
+
+stages:
+  - build
+  - lint
 jobs:
   include:
-    - stage: "Tests"
-      name: "Build"
+    - stage: build
       script: npm run build
-      name: "Lint"
+    - stage: lint
       script: npm run lint
