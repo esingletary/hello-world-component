@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "lts/*"
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Build"
+      script: npm run build
+      name: "Lint"
+      script: npm run lint
